@@ -1,8 +1,6 @@
 # Sails.js Documentation (v0.11.x)
 
-
 Guide and reference documentation for the 0.11.x release of Sails.  Content for most sections on the Sails website (beta.sailsjs.org) is compiled from here.
-
 
 ##### Contributing to the docs
 
