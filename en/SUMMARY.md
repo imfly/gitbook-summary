@@ -1,17 +1,19 @@
 # Sails.js 官方文档（中文版）
 
-- 入门指南
-  * [安装](getting-started/getting-started.md)
-  * [nodejs新手？](getting-started/NewToNode.md)
-  * [sails是什么？](getting-started/WhatIsSails.md)
-- 核心概念
-  * [Assets](concepts/Assets/Assets.md)
+- Getting Started
+  * [Installation](getting-started/getting-started.md)
+  * [New To Node?](getting-started/NewToNode.md)
+  * [What is Sails?](getting-started/WhatIsSails.md)
+- Concepts
+  - [Assets](concepts/Assets/Assets.md)
     * [Default Tasks](concepts/Assets/DefaultTasks.md)
-    * Disabling Grunt 
-    * Task Automation
-  - Configuration
-    * Using `.sailsrc` Files
-  * Controllers
+    * [Disabling Grunt](concepts/Assets/DisablingGrunt.md)
+    * [Task Automation](concepts/Assets/TaskAutomation.md)
+  - [Configuration](concepts/Assets/Configuation.md)
+    * [The local.js file](concepts/Configuration/localjsfile.md)
+    * [Using `.sailsrc` Files](concepts/Configuration/usingsailsrcfiles.md)
+  - [Controllers](concepts/Configuration/Controllers.md)
+    * [Generating Controllers]()
   * Custom Responses
   * Deployment
     * FAQ

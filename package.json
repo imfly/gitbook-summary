@@ -1,0 +1,33 @@
+{
+  "name": "sailsjs-docs-gitbook",
+  "version": "1.0.0",
+  "description": "Sails.js documents gitbook",
+  "main": "lib/index.js",
+  "bin": {
+    "book": "./bin/book.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/imfly/sailsjs-docs-gitbook.git"
+  },
+  "keywords": [
+    "sails.js",
+    "docs",
+    "gitbook"
+  ],
+  "author": "imfly",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/imfly/sailsjs-docs-gitbook/issues"
+  },
+  "homepage": "https://github.com/imfly/sailsjs-docs-gitbook",
+  "dependencies": {
+    "bash-color": "0.0.3",
+    "commander": "^2.9.0",
+    "lodash": "^3.10.1",
+    "q": "^1.4.1"
+  }
+}
