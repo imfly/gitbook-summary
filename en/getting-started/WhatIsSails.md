@@ -1,13 +1,14 @@
-# What is Sails?
+# Sails是什么？
 
+当然，`Sails`是一个`web框架`。但退一步，这又是什么意思呢？有时，当我们提到`web`的时候，我们指的是"front-end web"(web前端）。
+我们想到的是Web标准的概念，像HTML5或CSS3；以及框架，`Backbone`、`Angular`, 或 `jQuery`。`sails`可不是“这种”的`web`框架。
+`Sails`可以与`Angular`和`Backbone`工作的很好，但绝不会使用`Sails`取代这些包。
 
-Sails is, of course, a web framework.  But take a step back.  What does that mean?  Sometimes, when we refer to the "web", we mean the "front-end web."  We think of concepts like web standards, or HTML 5, or CSS 3; and frameworks like Backbone, or Angular, or jQuery.  Sails is not "that kind" of a web framework.  Sails works great with Angular and Backbone, but you would never use Sails _instead_ of those libraries.
+换句话说，当我们谈论`Web框架`的时候，我们指的是“back-end web”（服务器端）。这里提到的概念是`REST`、`HTTP`,或`WebSockets`，
+以及`Java`、`Ruby`、`Node.js`等技术。一个“back-end web”框架有助于你构建API，处理HTML文件成千上万的并发用户。`Sails`就是
+“这种”`web框架`。
 
-On the other hand, sometimes when we talk about "web frameworks", we mean the "back-end web."  This evokes concepts like REST, or HTTP, or WebSockets; and technologies like Java, or Ruby, or Node.js.  A "back-end web" framework helps you do things like build APIs, serve HTML files, and handle hundreds of thousands of simultaneous users.  Sails is "that kind" of web framework.
-
-
-
-## Convention over Configuration
+## 约定优于配置
 
 Sails accomplishes many of the same goals as other MVC web application frameworks, using many of the same methodologies.  This was done on purpose.  A consistent approach makes developing apps more predictable and efficient for everybody involved.
 
@@ -18,13 +19,13 @@ Imagine starting a new job at a company building a Sails app (or imagine startin
 > Sails didn't invent this concept-- it's [been around for years](https://en.wikipedia.org/wiki/Convention_over_configuration).  Even before the phrase "Convention over Configuration" (or CoC) was popularized by Ruby on Rails, it was a core tenet of the JavaBeans specification and in many ways, a natural lashback against the extremely verbose XML configuration common in traditional Java web frameworks of the late '90s and early 2000s.
 
 
-## Loose Coupling
+## 松耦合
 
 The days of forcing a one-size-fits-all approach to development are over.  We need tools that allow us to pick and choose the components that fit our requirements.  In fact, it’s just plain lazy to create things any other way.  Sails’s approach is to loosely couple components so that they can be added or subtracted from your app at will.
 
 Node at its core has created a “can do” culture eager to experiment and make things work. Sails embraces this attitude and strives to deliver tools that work around you.  The level of automation or magic you want in Sails is directly tied to the time you have for a project and your experience working with Node. Sails is flexible enough to allow you to explore and create when you have the time but also provides automation when you don’t.
 
-Sails accomplishes this loose coupling using plain-old require.  No magic, other than the time to craft components that can be part of the whole but don’t need to be present in order for the whole to work.  For example, controllers, models, and configuration files are just Node modules.  Sails uses some convention to help.  Sails picks up on the name UserController.js in the Controllers folder to deduce that this is indeed a user controller.  Another example involves policies.  So policies allow you to have a bit of code that executes on controller or specific controller action.  The cool part is that the configuration file that connects the policy with the controller/action are separate.  That means you can write a bunch of different policies and they are completely portable between Sails apps.  You can decide later which controller/actions you want to apply them to.  
+Sails accomplishes this loose coupling using plain-old require.  No magic, other than the time to craft components that can be part of the whole but don’t need to be present in order for the whole to work.  For example, controllers, models, and configuration files are just Node modules.  Sails uses some convention to help.  Sails picks up on the name UserController.js in the Controllers folder to deduce that this is indeed a user controller.  Another example involves policies.  So policies allow you to have a bit of code that executes on controller or specific controller action.  The cool part is that the configuration file that connects the policy with the controller/action are separate.  That means you can write a bunch of different policies and they are completely portable between Sails apps.  You can decide later which controller/actions you want to apply them to.
 
 Sails core consists of twenty different hooks: modules that modify the server runtime, adding middleware, binding route listeners, or otherwise attaching additional capabilities to the framework.  This gives you access to override or disable every component and configuration parameter in Sails.  These hooks are loaded at run-time when Sails starts.  You even have the ability to have one-time configuration for your hook itself.  This is actually one of the key differentiators between hooks and services.
 

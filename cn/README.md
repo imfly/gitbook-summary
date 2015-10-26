@@ -3,7 +3,7 @@ Sails.js 开发框架官方文档（中文版）
 
 ## 关于`sails.js`
 
-`sails.js`扩展了`express`,添加了很多功能模块，支持`REST`、各种流行数据库等，使用它进行实时web应用开发是件愉快的事情。
+`sails.js`扩展了`express`，添加了很多功能模块，支持`REST`、各种流行数据库等，使用它进行实时web应用开发是件愉快的事情。
 
 ## 关于本电子书
 
@@ -16,8 +16,11 @@ Sails.js 开发框架官方文档（中文版）
 ## 链接
 
 下载页： https://imfly.gitbooks.io/sailsjs-docs-gitbook/
+
 中文版： https://imfly.gitbooks.io/sailsjs-docs-gitbook/content/cn/index.html
+
 英文版： https://imfly.gitbooks.io/sailsjs-docs-gitbook/content/en/index.html
+
 原码库： https://github.com/imfly/sailsjs-docs-gitbook
 
 ## 贡献
