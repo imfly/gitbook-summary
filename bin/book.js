@@ -2,7 +2,6 @@
 var Q = require("q");
 var _ = require("lodash");
 var program = require('commander');
-var color = require('bash-color');
 
 var pkg = require("../package.json");
 var book = require("../lib/");
@@ -26,20 +25,12 @@ program
 
 program
     .command('summary')
-    .description('generate en summary from */0home/0home.md')
+    .description('generate en summary from the folder "en"')
     .action(function () {
-        //var _versions = versions.list();
-        //runPromise(
-            book.summary()
-        //        .then(function (txt) {
-        //            console.log('The summary is ' + txt);
-        //        })
-        //);
+        book.summary();
     });
 
 // Parse and fallback to help if no args
 if (_.isEmpty(program.parse(process.argv).args) && process.argv.length === 2) {
     program.help();
 }
-
-console.log(color.red('Finished!'));

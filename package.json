@@ -1,7 +1,7 @@
 {
   "name": "sailsjs-docs-gitbook",
   "version": "1.0.0",
-  "description": "Sails.js documents gitbook",
+  "description": "Sails.js 官方文档（中英合辑）",
   "main": "lib/index.js",
   "bin": {
     "book": "./bin/book.js"
