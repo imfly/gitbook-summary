@@ -2,7 +2,7 @@
 
 ## About
 
-Auto generate a summary from a folder, such as "en" or "cn"。
+Auto generate a `SUMMARY.MD` from a folder, such as "en" or "cn"。
 
 ## Install
 
@@ -21,10 +21,10 @@ npm link
 
 ## Using
 
-Generate a summary
+Generate a `SUMMARY.md`
 
 ```
-book summary --root "en"
+book summary -r /path/to/your/book/
 ``` 
 
 ## Contribute

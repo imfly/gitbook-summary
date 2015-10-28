@@ -20,14 +20,20 @@ function runPromise(p) {
 
 program
     .version(pkg.version)
-    .option('-v, --gitbook [version]', 'specify GitBook version to use')
     .option('-d, --debug', 'enable verbose error');
 
 program
     .command('summary')
-    .description('generate en summary from the folder "en"')
-    .action(function () {
-        book.summary();
+    .alias('sm')
+    .description('generate a `SUMMARY.md` from a folder')
+    .option("-r, --rootfolder [required]",  "root folder, default is `.`")
+    .option("-o, --outputfile [optional]",  "output file, defaut is `./SUMMARY.md`")
+    .option("-c, --catalogfolders [optional]", "catalog folders included book files, default is `all`.")
+    .option("-i, --ignorefolders [optional]", "ignore folders that be excluded, default is `Your Book Name`.")
+    .option("-u, --unchangedcatalog [optional]", "unchanged catalog like `request.js`, default is none.")
+    .action(function (options) {
+        // console.log(options.rootfolder);
+        book.summary(options);
     });
 
 // Parse and fallback to help if no args

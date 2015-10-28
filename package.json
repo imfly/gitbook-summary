@@ -1,20 +1,20 @@
 {
-  "name": "sailsjs-docs-gitbook",
+  "name": "gitbook-summary",
   "version": "1.0.0",
-  "description": "Sails.js 官方文档（中英合辑）",
+  "description": "A CLI to enerate  a summary from a given folder.",
   "main": "lib/index.js",
   "bin": {
-    "book": "./bin/book.js"
+    "book": "./bin/summary.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/imfly/sailsjs-docs-gitbook.git"
+    "url": "https://github.com/imfly/gitbook-summary.git"
   },
   "keywords": [
-    "sails.js",
+    "summary",
     "docs",
     "gitbook"
   ],
