@@ -30,7 +30,7 @@ program
     .option("-o, --outputfile [optional]",  "output file, defaut is `./SUMMARY.md`")
     .option("-c, --catalogfolders [optional]", "catalog folders included book files, default is `all`.")
     .option("-i, --ignorefolders [optional]", "ignore folders that be excluded, default is `Your Book Name`.")
-    .option("-u, --unchangedcatalog [optional]", "unchanged catalog like `request.js`, default is none.")
+    .option("-u, --unchangedcatalog [optional]", "unchanged catalog like `request.js`, default is `[]`.")
     .action(function (options) {
         // console.log(options.rootfolder);
         book.summary(options);

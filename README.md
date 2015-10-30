@@ -6,8 +6,6 @@ Auto generate a `SUMMARY.MD` from a folder, such as "en" or "cn"。
 
 ## Install
 
-(Todo)
-
 ```
 npm install -g gitbook-summary
 ```
