@@ -26,13 +26,14 @@ program
     .command('summary')
     .alias('sm')
     .description('generate a `SUMMARY.md` from a folder')
-    .option("-r, --rootfolder [required]",  "root folder, default is `.`")
-    .option("-o, --outputfile [optional]",  "output file, defaut is `./SUMMARY.md`")
-    .option("-c, --catalogfolders [optional]", "catalog folders included book files, default is `all`.")
-    .option("-i, --ignorefolders [optional]", "ignore folders that be excluded, default is `Your Book Name`.")
+    .option("-r, --bookroot [optional]",  "root folder, default is `.`")
+    .option("-n, --bookname [optional]", "book name, default is `Your Book Name`.")
+    .option("-c, --bookcatalog [optional]", "catalog folders included book files, default is `all`.")
+    .option("-i, --ignorefolders [optional]", "ignore folders that be excluded, default is `[]`.")
     .option("-u, --unchangedcatalog [optional]", "unchanged catalog like `request.js`, default is `[]`.")
+    .option("-o, --outputfile [optional]",  "output file, defaut is `./SUMMARY.md`")    
     .action(function (options) {
-        // console.log(options.rootfolder);
+        // console.log(options.bookroot);
         book.summary(options);
     });
 

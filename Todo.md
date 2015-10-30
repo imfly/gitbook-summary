@@ -4,4 +4,5 @@
 
 * Link `README.md` to the parent directory;
 * Add sort feathure according to CLI parameters;
-* Read configures from `book.json`
+* Read configures from `book.json`;
+* Add copy feathure;
