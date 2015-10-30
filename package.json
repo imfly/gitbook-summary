@@ -1,7 +1,7 @@
 {
   "name": "gitbook-summary",
-  "version": "1.0.0",
-  "description": "A CLI to enerate  a summary from a given folder.",
+  "version": "1.0.2",
+  "description": "A CLI to generate  a summary from a given folder.",
   "main": "lib/index.js",
   "bin": {
     "book": "./bin/summary.js"
