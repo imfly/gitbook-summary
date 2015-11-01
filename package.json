@@ -1,6 +1,6 @@
 {
   "name": "gitbook-summary",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A CLI to generate  a summary from a given folder.",
   "main": "lib/index.js",
   "bin": {
@@ -15,8 +15,9 @@
   },
   "keywords": [
     "summary",
-    "docs",
-    "gitbook"
+    "gitbook",
+    "cli",
+    "nodejs"
   ],
   "author": "imfly",
   "license": "MIT",
@@ -28,7 +29,6 @@
     "bash-color": "0.0.3",
     "commander": "^2.9.0",
     "lodash": "^3.10.1",
-    "path": "^0.12.7",
-    "q": "^1.4.1"
+    "path": "^0.12.7"
   }
 }

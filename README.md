@@ -22,13 +22,14 @@ npm link
 Generate a `SUMMARY.md`
 
 ```
-book summary -r /path/to/your/book/
+cd /path/to/your/book/
+book sm g
 ``` 
 
 For example:
 
 ```
-book sm -r ../sailsjs-docs-gitbook/en -i 0home -u 'myApp' -c 'concepts, reference, userguides' -n "Sails.js 官方文档(中英合辑）"
+book sm g -r ../sailsjs-docs-gitbook/en -i 0home -u 'myApp' -c 'concepts, reference, userguides' -n "Sails.js 官方文档(中英合辑）"
 ```
 
 ## Contribute
