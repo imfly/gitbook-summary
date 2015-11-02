@@ -32,6 +32,12 @@ For example:
 book sm g -r ../sailsjs-docs-gitbook/en -i 0home -u 'myApp' -c 'concepts, reference, userguides' -n "Sails.js 官方文档(中英合辑）"
 ```
 
+## Test
+
+```
+npm test
+```
+
 ## Contribute
 
 We love pull requests! You can `fork it` and commit a `pr`

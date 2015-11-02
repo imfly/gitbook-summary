@@ -7,7 +7,7 @@
     "book": "./bin/summary.js"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node_modules/.bin/mocha --reporter spec --timeout 15000"
   },
   "repository": {
     "type": "git",
@@ -28,7 +28,11 @@
   "dependencies": {
     "bash-color": "0.0.3",
     "commander": "^2.9.0",
-    "lodash": "^3.10.1",
+    "lodash": "^3.10.1",    
     "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "mocha": "^2.3.3",
+    "should": "^7.1.1"
   }
 }
