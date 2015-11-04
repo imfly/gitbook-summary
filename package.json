@@ -28,11 +28,13 @@
   "dependencies": {
     "bash-color": "0.0.3",
     "commander": "^2.9.0",
-    "lodash": "^3.10.1",    
+    "fs-extra": "^0.26.2",
+    "lodash": "^3.10.1",
     "path": "^0.12.7"
   },
   "devDependencies": {
     "mocha": "^2.3.3",
+    "q": "^1.4.1",
     "should": "^7.1.1"
   }
 }
