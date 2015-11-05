@@ -22,14 +22,33 @@ npm link
 Generate a `SUMMARY.md`
 
 ```
-cd /path/to/your/book/
-book sm g
+$ cd /path/to/your/book/
+$ book sm g
 ``` 
 
 For example:
 
 ```
 book sm g -r ../sailsjs-docs-gitbook/en -i 0home -u 'myApp' -c 'concepts, reference, userguides' -n "Sails.js 官方文档(中英合辑）"
+```
+
+or, you can create a `book.json` in the book`s root folder, for example:
+
+```
+// test/books/config-json/book.json
+{
+    "name": "json-config-name",
+    "outputfile": "test.md",
+    "catalog": "all",
+    "ignorefolders": [],
+    "unchangedcatalog": []
+}
+```
+
+then, you can do:
+
+```
+$ book sm g
 ```
 
 ## Test

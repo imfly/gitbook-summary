@@ -1,4 +1,7 @@
 {
     "name": "json-config-name",
-    "outputfile": "test.md"
+    "outputfile": "test.md",
+    "catalog": "all",
+    "ignorefolders": [],
+    "unchangedcatalog": []
 }
