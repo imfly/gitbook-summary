@@ -26,14 +26,14 @@ describe('Index.js', function() {
     });
 
     describe('#summary()', function() {
-        var bookRoot, file;
+        var bookRoot;
 
         beforeEach(function() {
             bookRoot = path.resolve("test/books/basic");
         })
 
         afterEach(function(done) {
-            file = path.resolve(bookRoot, 'SUMMARY.md');
+            var file = path.resolve(bookRoot, 'SUMMARY.md');
             fs.remove(file, done);
         })
 
@@ -43,11 +43,11 @@ describe('Index.js', function() {
                 book.summary({
                     bookroot: bookRoot
                 });
-
+                
                 // Fixme why can`t pass it using sync?
                 // should(fs.existsSync(path.join(bookRoot, 'SUMMARY.md'))).be.ok();
-                fs.exists(path.join(bookRoot, 'SUMMARY.md'), function(exist) {
-                    should(exist).be.ok();
+                fs.exists(path.resolve(bookRoot, 'SUMMARY.md'), function(exist) {
+                    exist.should.be.ok();
                 })
             });
 
@@ -58,10 +58,10 @@ describe('Index.js', function() {
                     bookname: bookname
                 });
 
-                var summary = path.join(bookRoot, 'SUMMARY.md')
+                var summary = path.resolve(bookRoot, 'SUMMARY.md')
                 fs.readFile(summary, 'utf8', function(err, content) {
                     if (err) console.log(err);
-                    should(content).be.equal('# This is a test book\n\n');
+                    content.should.be.equal('# This is a test book\n\n');
                 });
             })
 
@@ -80,21 +80,22 @@ describe('Index.js', function() {
             fs.remove(file, done);
         })
 
-        it('should get a `SUMMARY.md` if given a `book.json`', function(done) {
+        it('should get a `SUMMARY.md` if given a `book.json`', function() {
             book.summary({
                 bookroot: bookRoot
             });
 
             var summary = path.resolve(bookRoot, config.get(bookRoot).outputfile);
 
-            fs.exists(path.join(bookRoot, summary), function(exist) {
-                should(exist).be.ok();
-            })            
+            fs.exists(summary, function(err, exist) {
+                if (err) {console.log(err)};
+                exist.should.be.ok();
+            })
 
-            // fs.readFile(summary, 'utf8', function(err, content) {
-            //     if (err) console.log(err);
-            //     should(content).be.equal('# json-config-name\n\n');
-            // });
+            fs.readFile(summary, 'utf8', function(err, content) {
+                if (err) console.log(err);
+                content.should.containEql('# json-config-name\n\n');
+            });
         });
     });
 });
