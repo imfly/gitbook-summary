@@ -1,5 +1,10 @@
 # Gitbook Summary 
 
+[![NPM version][npm-image]][npm-url]
+[![Build Status](https://travis-ci.org/imfly/gitbook-summary.png?branch=master)](https://travis-ci.org/imfly/gitbook-summary)
+[![Dependencies Status](https://david-dm.org/imfly/gitbook-summary.png)](https://david-dm.org/imfly/gitbook-summary)
+[![Coverage Status](https://coveralls.io/repos/imfly/gitbook-summary/badge.png)](https://coveralls.io/r/imfly/gitbook-summary)
+
 ## About
 
 Auto generate a `SUMMARY.MD` from a folder, such as "en" or "cn"。
