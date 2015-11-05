@@ -1,40 +1,40 @@
 {
-  "name": "gitbook-summary",
-  "version": "1.0.4",
-  "description": "A CLI to generate  a summary from a given folder.",
-  "main": "lib/index.js",
-  "bin": {
-    "book": "./bin/summary.js"
-  },
-  "scripts": {
-    "test": "node_modules/.bin/mocha --reporter spec --timeout 15000"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/imfly/gitbook-summary.git"
-  },
-  "keywords": [
-    "summary",
-    "gitbook",
-    "cli",
-    "nodejs"
-  ],
-  "author": "imfly",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/imfly/sailsjs-docs-gitbook/issues"
-  },
-  "homepage": "https://github.com/imfly/sailsjs-docs-gitbook",
-  "dependencies": {
-    "bash-color": "0.0.3",
-    "commander": "^2.9.0",
-    "fs-extra": "^0.26.2",
-    "lodash": "^3.10.1",
-    "path": "^0.12.7"
-  },
-  "devDependencies": {
-    "mocha": "^2.3.3",
-    "q": "^1.4.1",
-    "should": "^7.1.1"
-  }
+    "name": "gitbook-summary",
+    "version": "1.0.6",
+    "description": "A CLI to generate  a summary from a given folder.",
+    "main": "lib/index.js",
+    "bin": {
+        "book": "./bin/summary.js"
+    },
+    "scripts": {
+        "test": "node_modules/.bin/mocha --reporter spec --timeout 15000"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/imfly/gitbook-summary.git"
+    },
+    "keywords": [
+        "gitbook",
+        "summary",
+        "cli",
+        "nodejs"
+    ],
+    "author": "imfly",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/imfly/sailsjs-docs-gitbook/issues"
+    },
+    "homepage": "https://github.com/imfly/sailsjs-docs-gitbook",
+    "dependencies": {
+        "bash-color": "0.0.3",
+        "commander": "^2.9.0",
+        "fs-extra": "^0.26.2",
+        "lodash": "^3.10.1",
+        "path": "^0.12.7"
+    },
+    "devDependencies": {
+        "mocha": "^2.3.3",
+        "q": "^1.4.1",
+        "should": "^7.1.1"
+    }
 }

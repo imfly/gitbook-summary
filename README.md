@@ -1,6 +1,6 @@
 # Gitbook Summary 
 
-[![NPM version][npm-image]][npm-url]
+[![npm version](https://badge.fury.io/js/gitbook-summary.svg)](https://badge.fury.io/js/gitbook-summary)
 [![Build Status](https://travis-ci.org/imfly/gitbook-summary.png?branch=master)](https://travis-ci.org/imfly/gitbook-summary)
 [![Dependencies Status](https://david-dm.org/imfly/gitbook-summary.png)](https://david-dm.org/imfly/gitbook-summary)
 [![Coverage Status](https://coveralls.io/repos/imfly/gitbook-summary/badge.png)](https://coveralls.io/r/imfly/gitbook-summary)
