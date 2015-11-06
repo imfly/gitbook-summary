@@ -5,21 +5,13 @@
 [![Dependencies Status](https://david-dm.org/imfly/gitbook-summary.png)](https://david-dm.org/imfly/gitbook-summary)
 [![Coverage Status](https://coveralls.io/repos/imfly/gitbook-summary/badge.png)](https://coveralls.io/r/imfly/gitbook-summary)
 
-## About
 
-Auto generate a `SUMMARY.MD` from a folder, such as "en" or "cn"。
+A command line tool to generate a `SUMMARY.MD` from a folder, such as "/en" or "/cn"。
 	
 ## Install
 
 ```
 npm install -g gitbook-summary
-```
-
-## Development
-
-```
-npm install
-npm link
 ```
 
 ## Using
@@ -56,6 +48,23 @@ then, you can do:
 $ book sm g
 ```
 
+You will get a `test.md` file:
+
+[![test.md.jpg]](img/test.md.jpg)
+
+## eBooks
+
+Sails Docs Gitbook : https://imfly.gitbooks.io/sailsjs-docs-gitbook/
+
+The Sources : https://github.com/imfly/sailsjs-docs-gitbook
+
+## Development
+
+```
+npm install
+npm link
+```
+
 ## Test
 
 ```
@@ -65,13 +74,6 @@ npm test
 ## Contribute
 
 We love pull requests! You can `fork it` and commit a `pr`
-
-## Books
-
-Sails Docs Gitbook : https://imfly.gitbooks.io/sailsjs-docs-gitbook/
-
-The Sources : https://github.com/imfly/sailsjs-docs-gitbook
-
 
 ## License
 
