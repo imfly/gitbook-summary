@@ -50,7 +50,7 @@ $ book sm g
 
 You will get a `test.md` file:
 
-[![test.md.jpg]](img/test.md.jpg)
+![test.md.jpg](img/test.md.jpg)
 
 ## eBooks
 
