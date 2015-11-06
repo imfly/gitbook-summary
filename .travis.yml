@@ -4,3 +4,6 @@ node_js:
   - "4.1"
   - "4.0"
   - "0.12"
+script: npm test
+after_script:
+  npm run cov

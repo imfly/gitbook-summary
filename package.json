@@ -1,40 +1,44 @@
 {
-    "name": "gitbook-summary",
-    "version": "1.0.6",
-    "description": "A CLI to generate  a summary from a given folder.",
-    "main": "lib/index.js",
-    "bin": {
-        "book": "./bin/summary.js"
-    },
-    "scripts": {
-        "test": "node_modules/.bin/mocha --reporter spec --timeout 15000"
-    },
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/imfly/gitbook-summary.git"
-    },
-    "keywords": [
-        "gitbook",
-        "summary",
-        "cli",
-        "nodejs"
-    ],
-    "author": "imfly",
-    "license": "MIT",
-    "bugs": {
-        "url": "https://github.com/imfly/sailsjs-docs-gitbook/issues"
-    },
-    "homepage": "https://github.com/imfly/sailsjs-docs-gitbook",
-    "dependencies": {
-        "bash-color": "0.0.3",
-        "commander": "^2.9.0",
-        "fs-extra": "^0.26.2",
-        "lodash": "^3.10.1",
-        "path": "^0.12.7"
-    },
-    "devDependencies": {
-        "mocha": "^2.3.3",
-        "q": "^1.4.1",
-        "should": "^7.1.1"
-    }
+  "name": "gitbook-summary",
+  "version": "1.0.6",
+  "description": "A CLI to generate  a summary from a given folder.",
+  "homepage": "https://github.com/imfly/gitbook-summary",
+  "main": "lib/index.js",
+  "bin": {
+    "book": "./bin/summary.js"
+  },
+  "scripts": {
+    "start": "npm publish .",
+    "test": "node_modules/.bin/mocha --reporter spec --timeout 15000",
+    "cov": "node_modules/.bin/istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/imfly/gitbook-summary.git"
+  },
+  "keywords": [
+    "gitbook",
+    "summary",
+    "cli",
+    "nodejs"
+  ],
+  "author": "imfly",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/imfly/sailsjs-docs-gitbook/issues"
+  },
+  "dependencies": {
+    "bash-color": "0.0.3",
+    "commander": "^2.9.0",
+    "fs-extra": "^0.26.2",
+    "lodash": "^3.10.1",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "coveralls": "^2.11.4",
+    "istanbul": "^0.4.0",
+    "mocha": "^2.3.3",
+    "q": "^1.4.1",
+    "should": "^7.1.1"
+  }
 }
