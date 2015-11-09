@@ -5,7 +5,6 @@
 * Write a document about how to developt this `CLI` app;
 * Add test;
 * Modify 'options' by using [yargs](https://github.com/jsResources/yargs);
-* Add `q`;
 
 ## 2015.10.30
 

@@ -9,7 +9,7 @@ var config = require('../lib/config');
 describe('Index.js', function() {
     describe('#summary()', function() {
         after(function(done) {
-            var file = path.resolve('SUMMARY.md');            
+            var file = path.resolve('SUMMARY.md');
             fs.remove(file, done);
         })
 
@@ -40,9 +40,9 @@ describe('Index.js', function() {
 
             it('given a option bookroot, for example: book sm -r bookroot', function() {
                 book.summary({
-                    bookroot: bookRoot
+                    root: bookRoot
                 });
-                
+
                 // Fixme why can`t pass it using sync?
                 // should(fs.existsSync(path.join(bookRoot, 'SUMMARY.md'))).be.ok();
                 fs.exists(path.resolve(bookRoot, 'SUMMARY.md'), function(exist) {
@@ -53,7 +53,7 @@ describe('Index.js', function() {
             it('given a option bookname, for example: book sm -r bookroot -n bookname', function() {
                 var bookname = 'This is a test book'
                 book.summary({
-                    bookroot: bookRoot,
+                    root: bookRoot,
                     bookname: bookname
                 });
 
@@ -81,13 +81,15 @@ describe('Index.js', function() {
 
         it('should get a `SUMMARY.md` if given a `book.json`', function() {
             book.summary({
-                bookroot: bookRoot
+                root: bookRoot
             });
 
             var summary = path.resolve(bookRoot, config.get(bookRoot).outputfile);
 
             fs.exists(summary, function(err, exist) {
-                if (err) {console.log(err)};
+                if (err) {
+                    console.log(err)
+                };
                 exist.should.be.ok();
             })
 

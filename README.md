@@ -8,37 +8,69 @@
 
 A command line tool to generate a `SUMMARY.MD` from a folder, such as "/en" or "/cn"。
 	
+## Features
+
+- ~~Generate `SUMMARY.md` by using a CLI with some options~~ 
+- ~~Setting with `book.json`~~
+- ~~Link `README.md` to the parent directory~~
+- ~~Only get '.md' files ~~
+- ~~Order by alphabet or numbers~~
+- Generate eBooks(html, pdf, etc) by extending `gitbook`;
+- Publish to github pages, for example:  http://imfly.github.io/sails-docs
+- Merge to one page like a blog.
+- Auto aggregate ebooks to website.
+
 ## Install
 
 ```
 npm install -g gitbook-summary
 ```
 
+## CoC (Convention over Configuration) 
+
+Source directory:
+
+```
+sources
+├── 1-FirstChapter   // The first chapter，format: {orderNumber or alphabet}-{chapterName}.md
+├────── 1-FirstDocument.md 
+├────── 5-SecondDocument.md  // concentrating solely on the order, not the numbers.
+├── 3-SecondChapter                     // Focus only on the order, not the numbers.
+├────── 1-FirstDocumentOfSecondChapter.md 
+├────── 2-SecondDocumentOfSecondChapter.md  
+├── 7-ThirdChapter 
+├── FourthChapter  // May have no order
+├── README.md // In addition to readme.md, not to put other markdown documents 
+└── book.json     // Set up the book 
+```
+
 ## Using
 
-Generate a `SUMMARY.md`
+1. Generate a `SUMMARY.md` Simply
 
 ```
 $ cd /path/to/your/book/
 $ book sm g
 ``` 
 
-For example:
+or, For example:
 
 ```
-book sm g -r ../sailsjs-docs-gitbook/en -i 0home -u 'myApp' -c 'concepts, reference, userguides' -n "Sails.js 官方文档(中英合辑）"
+$ book sm g -r ../sailsjs-docs-gitbook/en -i 0home -u 'myApp' -c 'concepts, reference, userguides' -n "Sails.js 官方文档(中英合辑）"
 ```
 
-or, you can create a `book.json` in the book`s root folder, for example:
+2. Create a `book.json` in the book`s root folder
+
+for example:
 
 ```
 // test/books/config-json/book.json
 {
     "bookname": "json-config-name",
     "outputfile": "test.md",
-    "catalog": "all",
-    "ignores": [],
-    "unchanged": []
+    "catalog": "all",  // or [chapter1，chapter2, ...]
+    "ignores": [],  
+    "unchanged": [] // for example: ['myApp'] -> `myApp` not `My App` 
 }
 ```
 
@@ -77,5 +109,5 @@ We love pull requests! You can `fork it` and commit a `pr`
 
 ## License
 
-Whatever you do, please indicate the source.
+The MIT License
 
