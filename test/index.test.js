@@ -8,13 +8,12 @@ var config = require('../lib/config');
 
 describe('Index.js', function() {
     describe('#summary()', function() {
-
         after(function(done) {
-            file = path.resolve('SUMMARY.md');
+            var file = path.resolve('SUMMARY.md');            
             fs.remove(file, done);
         })
 
-        it('should get a `SUMMARY.md` for `.` if has no options, for example: book sm', function() {
+        it('should get a `SUMMARY.md` for `.` if has no options, for example: book sm g', function() {
             book.summary({});
 
             // Fixme why can`t pass it using sync?

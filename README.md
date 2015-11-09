@@ -34,11 +34,11 @@ or, you can create a `book.json` in the book`s root folder, for example:
 ```
 // test/books/config-json/book.json
 {
-    "name": "json-config-name",
+    "bookname": "json-config-name",
     "outputfile": "test.md",
     "catalog": "all",
-    "ignorefolders": [],
-    "unchangedcatalog": []
+    "ignores": [],
+    "unchanged": []
 }
 ```
 
@@ -50,7 +50,7 @@ $ book sm g
 
 You will get a `test.md` file:
 
-![test.md.jpg](img/test.md.jpg)
+![test.md.jpg](doc/img/test.md.jpg)
 
 ## eBooks
 
