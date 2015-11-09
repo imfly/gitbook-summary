@@ -10,21 +10,12 @@ A command line tool to generate a `SUMMARY.MD` from a folder, such as "/en" or "
 	
 ## Features
 
-- ~~Generate `SUMMARY.md` by using a CLI with some options~~ 
-- ~~Setting with `book.json`~~
-- ~~Link `README.md` to the parent directory~~
-- ~~Only get '.md' files ~~
-- ~~Order by alphabet or numbers~~
-- Generate eBooks(html, pdf, etc) by extending `gitbook`;
-- Publish to github pages, for example:  http://imfly.github.io/sails-docs
-- Merge to one page like a blog.
-- Auto aggregate ebooks to website.
-
-## Install
-
-```
-npm install -g gitbook-summary
-```
+- Generate `SUMMARY.md` by using a CLI with some options 
+- Setting with `book.json`
+- Link `README.md` to the parent directory
+- Only get '.md' files
+- Order by alphabet or numbers
+- ...
 
 ## CoC (Convention over Configuration) 
 
@@ -44,9 +35,15 @@ sources
 └── book.json     // Set up the book 
 ```
 
+## Install
+
+```
+npm install -g gitbook-summary
+```
+
 ## Using
 
-1. Generate a `SUMMARY.md` Simply
+1> Generate a `SUMMARY.md` Simply
 
 ```
 $ cd /path/to/your/book/
@@ -59,7 +56,7 @@ or, For example:
 $ book sm g -r ../sailsjs-docs-gitbook/en -i 0home -u 'myApp' -c 'concepts, reference, userguides' -n "Sails.js 官方文档(中英合辑）"
 ```
 
-2. Create a `book.json` in the book`s root folder
+2> Create a `book.json` in the book`s root folder
 
 for example:
 
@@ -86,9 +83,10 @@ You will get a `test.md` file:
 
 ## eBooks
 
-Sails Docs Gitbook : https://imfly.gitbooks.io/sailsjs-docs-gitbook/
+* https://github.com/imfly/how-to-create-self-publishing-platform
+* https://github.com/imfly/sailsjs-docs-gitbook
 
-The Sources : https://github.com/imfly/sailsjs-docs-gitbook
+Sails Docs Gitbook : https://imfly.gitbooks.io/sailsjs-docs-gitbook/
 
 ## Development
 
@@ -102,6 +100,13 @@ npm link
 ```
 npm test
 ```
+
+## Todo
+
+- Generate eBooks(html, pdf, etc) by extending `gitbook`;
+- Publish to github pages, for example:  http://imfly.github.io/sails-docs
+- Merge to one page like a blog.
+- Auto aggregate ebooks to website.
 
 ## Contribute
 
