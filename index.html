@@ -1,45 +1,25 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en-us">
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta charset="UTF-8">
     <title>Gitbook-summary by imfly</title>
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/github-dark.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script src="javascripts/main.js"></script>
-    <!--[if lt IE 9]>
-      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
   </head>
   <body>
+    <section class="page-header">
+      <h1 class="project-name">Gitbook-summary</h1>
+      <h2 class="project-tagline">A command line tool to Generate summary for Gitbook</h2>
+      <a href="https://github.com/imfly/gitbook-summary" class="btn">View on GitHub</a>
+      <a href="https://github.com/imfly/gitbook-summary/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/imfly/gitbook-summary/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
 
-      <header>
-        <h1>Gitbook-summary</h1>
-        <p>A command line tool to Generate summary for Gitbook</p>
-      </header>
-
-      <div id="banner">
-        <span id="logo"></span>
-
-        <a href="https://github.com/imfly/gitbook-summary" class="button fork"><strong>View On GitHub</strong></a>
-        <div class="downloads">
-          <span>Downloads:</span>
-          <ul>
-            <li><a href="https://github.com/imfly/gitbook-summary/zipball/master" class="button">ZIP</a></li>
-            <li><a href="https://github.com/imfly/gitbook-summary/tarball/master" class="button">TAR</a></li>
-          </ul>
-        </div>
-      </div><!-- end banner -->
-
-    <div class="wrapper">
-      <nav>
-        <ul></ul>
-      </nav>
-      <section>
-        <h1>
+    <section class="main-content">
+      <h1>
 <a id="gitbook-summary" class="anchor" href="#gitbook-summary" aria-hidden="true"><span class="octicon octicon-link"></span></a>Gitbook Summary</h1>
 
 <p><a href="https://badge.fury.io/js/gitbook-summary"><img src="https://badge.fury.io/js/gitbook-summary.svg" alt="npm version"></a>
@@ -50,6 +30,37 @@
 <p>A command line tool to generate a <code>SUMMARY.MD</code> from a folder, such as "/en" or "/cn"。</p>
 
 <h2>
+<a id="features" class="anchor" href="#features" aria-hidden="true"><span class="octicon octicon-link"></span></a>Features</h2>
+
+<ul>
+<li>Generate <code>SUMMARY.md</code> by using a CLI with some options </li>
+<li>Setting with <code>book.json</code>
+</li>
+<li>Link <code>README.md</code> to the parent directory</li>
+<li>Only get '.md' files</li>
+<li>Order by alphabet or numbers</li>
+<li>...</li>
+</ul>
+
+<h2>
+<a id="coc-convention-over-configuration" class="anchor" href="#coc-convention-over-configuration" aria-hidden="true"><span class="octicon octicon-link"></span></a>CoC (Convention over Configuration)</h2>
+
+<p>Source directory:</p>
+
+<pre><code>sources
+├── 1-FirstChapter   // The first chapter，format: {orderNumber or alphabet}-{chapterName}.md
+├────── 1-FirstDocument.md 
+├────── 5-SecondDocument.md  // concentrating solely on the order, not the numbers.
+├── 3-SecondChapter                     // Focus only on the order, not the numbers.
+├────── 1-FirstDocumentOfSecondChapter.md 
+├────── 2-SecondDocumentOfSecondChapter.md  
+├── 7-ThirdChapter 
+├── FourthChapter  // May have no order
+├── README.md // In addition to readme.md, not to put other markdown documents 
+└── book.json     // Set up the book 
+</code></pre>
+
+<h2>
 <a id="install" class="anchor" href="#install" aria-hidden="true"><span class="octicon octicon-link"></span></a>Install</h2>
 
 <pre><code>npm install -g gitbook-summary
@@ -58,26 +69,28 @@
 <h2>
 <a id="using" class="anchor" href="#using" aria-hidden="true"><span class="octicon octicon-link"></span></a>Using</h2>
 
-<p>Generate a <code>SUMMARY.md</code></p>
+<p>1&gt; Generate a <code>SUMMARY.md</code> Simply</p>
 
 <pre><code>$ cd /path/to/your/book/
 $ book sm g
 </code></pre>
 
-<p>For example:</p>
+<p>or, For example:</p>
 
-<pre><code>book sm g -r ../sailsjs-docs-gitbook/en -i 0home -u 'myApp' -c 'concepts, reference, userguides' -n "Sails.js 官方文档(中英合辑）"
+<pre><code>$ book sm g -r ../sailsjs-docs-gitbook/en -i 0home -u 'myApp' -c 'concepts, reference, userguides' -n "Sails.js 官方文档(中英合辑）"
 </code></pre>
 
-<p>or, you can create a <code>book.json</code> in the book`s root folder, for example:</p>
+<p>2&gt; Create a <code>book.json</code> in the book`s root folder</p>
+
+<p>for example:</p>
 
 <pre><code>// test/books/config-json/book.json
 {
-    "name": "json-config-name",
+    "bookname": "json-config-name",
     "outputfile": "test.md",
-    "catalog": "all",
-    "ignorefolders": [],
-    "unchangedcatalog": []
+    "catalog": "all",  // or [chapter1，chapter2, ...]
+    "ignores": [],  
+    "unchanged": [] // for example: ['myApp'] -&gt; `myApp` not `My App` 
 }
 </code></pre>
 
@@ -88,14 +101,17 @@ $ book sm g
 
 <p>You will get a <code>test.md</code> file:</p>
 
-<p><img src="img/test.md.jpg" alt="test.md.jpg"></p>
+<p><img src="doc/img/test.md.jpg" alt="test.md.jpg"></p>
 
 <h2>
 <a id="ebooks" class="anchor" href="#ebooks" aria-hidden="true"><span class="octicon octicon-link"></span></a>eBooks</h2>
 
-<p>Sails Docs Gitbook : <a href="https://imfly.gitbooks.io/sailsjs-docs-gitbook/">https://imfly.gitbooks.io/sailsjs-docs-gitbook/</a></p>
+<ul>
+<li><a href="https://github.com/imfly/how-to-create-self-publishing-platform">https://github.com/imfly/how-to-create-self-publishing-platform</a></li>
+<li><a href="https://github.com/imfly/sailsjs-docs-gitbook">https://github.com/imfly/sailsjs-docs-gitbook</a></li>
+</ul>
 
-<p>The Sources : <a href="https://github.com/imfly/sailsjs-docs-gitbook">https://github.com/imfly/sailsjs-docs-gitbook</a></p>
+<p>Sails Docs Gitbook : <a href="https://imfly.gitbooks.io/sailsjs-docs-gitbook/">https://imfly.gitbooks.io/sailsjs-docs-gitbook/</a></p>
 
 <h2>
 <a id="development" class="anchor" href="#development" aria-hidden="true"><span class="octicon octicon-link"></span></a>Development</h2>
@@ -111,6 +127,17 @@ npm link
 </code></pre>
 
 <h2>
+<a id="todo" class="anchor" href="#todo" aria-hidden="true"><span class="octicon octicon-link"></span></a>Todo</h2>
+
+<ul>
+<li>Generate eBooks(html, pdf, etc) by extending <code>gitbook</code>;</li>
+<li>Publish to github pages, for example:  <a href="http://imfly.github.io/sails-docs">http://imfly.github.io/sails-docs</a>
+</li>
+<li>Merge to one page like a blog.</li>
+<li>Auto aggregate ebooks to website.</li>
+</ul>
+
+<h2>
 <a id="contribute" class="anchor" href="#contribute" aria-hidden="true"><span class="octicon octicon-link"></span></a>Contribute</h2>
 
 <p>We love pull requests! You can <code>fork it</code> and commit a <code>pr</code></p>
@@ -118,14 +145,16 @@ npm link
 <h2>
 <a id="license" class="anchor" href="#license" aria-hidden="true"><span class="octicon octicon-link"></span></a>License</h2>
 
-<p>Whatever you do, please indicate the source.</p>
-      </section>
-      <footer>
-        <p>Project maintained by <a href="https://github.com/imfly">imfly</a></p>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></small></p>
+<p>The MIT License</p>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/imfly/gitbook-summary">Gitbook-summary</a> is maintained by <a href="https://github.com/imfly">imfly</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
       </footer>
-    </div>
-    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
-    
+
+    </section>
+
+  
   </body>
 </html>
