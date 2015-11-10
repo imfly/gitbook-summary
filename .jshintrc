@@ -18,7 +18,7 @@
     ],
 
     "node": true,
-    "es5": true,
+    "esnext": true,
     "bitwise": true,
     "curly": true,
     "eqeqeq": true,
@@ -36,7 +36,7 @@
     "globalstrict": true,
     "nonstandard": true,
     "white": false,
-    "indent": 2,
+    "indent": 4,
     "expr": true,
     "multistr": true,
     "onevar": false,

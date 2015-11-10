@@ -2,7 +2,7 @@
   "name": "gitbook-summary",
   "version": "1.0.6",
   "description": "A CLI to generate  a summary from a given folder.",
-  "homepage": "https://github.com/imfly/gitbook-summary",
+  "homepage": "http://imfly.github.io/gitbook-summary/",
   "main": "lib/index.js",
   "bin": {
     "book": "./bin/summary.js"
