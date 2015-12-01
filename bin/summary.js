@@ -27,7 +27,7 @@ program
             book.summary(options);
         }
 
-        // Convert 
+        // Convert TW to CN
         else if (_.isEqual(cmd, "c") || _.isEqual(cmd, "convert")) {
             convert.run(options);
         }

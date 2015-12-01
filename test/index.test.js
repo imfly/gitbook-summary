@@ -76,7 +76,7 @@ describe('Index.js', function() {
         });
 
         after(function(done) {
-            var file = path.resolve(bookRoot, config.get(bookRoot).outputfile);
+            var file = path.resolve(bookRoot, config(bookRoot).outputfile);
             fs.remove(file, done);
         });
 
@@ -85,7 +85,7 @@ describe('Index.js', function() {
                 root: bookRoot
             });
 
-            var summary = path.resolve(bookRoot, config.get(bookRoot).outputfile);
+            var summary = path.resolve(bookRoot, config(bookRoot).outputfile);
 
             fs.exists(summary, function(err, exist) {
                 if (err) {
