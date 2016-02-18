@@ -3,7 +3,7 @@ var fs = require('fs-extra');
 var should = require('should');
 
 var book = require('../');
-var config = require('../lib/config');
+var config = require('../lib/bookJson');
 
 describe('Index.js', function() {
     describe('#summary()', function() {
