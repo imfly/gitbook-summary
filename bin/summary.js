@@ -8,13 +8,17 @@ var pkg = require("../package.json");
 var book = require("../lib/");
 var convert = require("../lib/convert");
 
+function list(val) {
+  return val.split(',');
+}
+
 program
     .version(pkg.version)
     .option("-d, --debug", "enable verbose error")
     .option("-r, --root [root]", "root folder, default is `.`")
     .option("-n, --bookname [bookname]", "book name, default is `Your Book Name`.")
     .option("-c, --catalog [catalog]", "catalog folders included book files, default is `all`.")
-    .option("-i, --ignores [ignores]", "ignore folders that be excluded, default is `[]`.")
+    .option("-i, --ignores <ignores>", "ignore folders that be excluded, default is `[]`.", list)
     .option("-u, --unchanged [unchanged]", "unchanged catalog like `request.js`, default is `[]`.")
     .option("-o, --outputfile [outputfile]", "output file, defaut is `./SUMMARY.md`");
 
