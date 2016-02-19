@@ -86,7 +86,7 @@ You will get a `test.md` file:
 * https://github.com/imfly/how-to-create-self-publishing-platform
 * https://github.com/imfly/sailsjs-docs-gitbook
 
-Sails Docs Gitbook : https://imfly.gitbooks.io/sailsjs-docs-gitbook/
+More Gitbooks : https://www.gitbook.com/@imfly
 
 ## Development
 
