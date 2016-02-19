@@ -23,6 +23,7 @@ describe('Index.js', function() {
         });
     });
 
+    // command line
     describe('#summary()', function() {
         var bookRoot;
 
@@ -37,7 +38,7 @@ describe('Index.js', function() {
 
         describe('should get a `SUMMARY.md`', function() {
 
-            it('given a option bookroot, for example: book sm -r bookroot', function() {
+            it('given an option root, for example: book sm g -r root', function() {
                 book.summary({
                     root: bookRoot
                 });
@@ -48,7 +49,7 @@ describe('Index.js', function() {
                 });
             });
 
-            it('given a option bookname, for example: book sm -r bookroot -n bookname', function() {
+            it('given an option bookname, for example: book sm g -n bookname', function() {
                 var bookname = 'This is a test book';
                 book.summary({
                     root: bookRoot,
@@ -60,13 +61,31 @@ describe('Index.js', function() {
                     if (err) {
                         console.log(err);
                     }
-                    content.should.be.equal('# This is a test book\n\n');
+                    content.should.containEql('# This is a test book\n\n');
+                    content.should.containEql('- Test');
                 });
             });
 
+            it('given an option ignores, for example: book sm g -i test', function() {
+                var bookname = 'This book has no test';
+                book.summary({
+                    root: bookRoot,
+                    bookname: bookname,
+                    ignores: ['test']
+                });
+
+                var summary = path.resolve(bookRoot, 'SUMMARY.md');
+                fs.readFile(summary, 'utf8', function(err, content) {
+                    if (err) {
+                        console.log(err);
+                    }
+                    content.should.be.equal('# This book has no test\n\n');
+                });
+            });
         });
     });
 
+    // has `book.json`
     describe('#summary()', function() {
         var bookRoot;
 
