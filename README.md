@@ -1,4 +1,4 @@
-# Gitbook Summary 
+# Gitbook Summary
 
 [![npm version](https://badge.fury.io/js/gitbook-summary.svg)](https://badge.fury.io/js/gitbook-summary)
 [![Build Status](https://travis-ci.org/imfly/gitbook-summary.png?branch=master)](https://travis-ci.org/imfly/gitbook-summary)
@@ -7,32 +7,32 @@
 
 
 A command line tool to generate a `SUMMARY.MD` from a folder。[Demo](http://imfly.github.io/how-to-create-self-publishing-platform) [中文文档](http://imfly.github.io/how-to-create-self-publishing-platform/3-%E5%A6%82%E4%BD%95%E6%89%93%E9%80%A0%E8%87%AA%E5%B7%B1%E7%9A%84%E5%B9%B3%E5%8F%B0%EF%BC%9F/2-Summary%E7%9A%84%E4%BD%BF%E7%94%A8.html)
-	
+
 ## Features
 
-- Generate `SUMMARY.md` by using a CLI with some options 
+- Generate `SUMMARY.md` by using a CLI with some options
 - Setting with `book.json`
 - Link `README.md` to the parent directory
 - Only get '.md' files
 - Order by alphabet or numbers
 - ...
 
-## CoC (Convention over Configuration) 
+## CoC (Convention over Configuration)
 
 Source directory:
 
 ```
 sources
 ├── 1-FirstChapter   // The first chapter，format: {orderNumber or alphabet}-{chapterName}.md
-├────── 1-FirstDocument.md 
+├────── 1-FirstDocument.md
 ├────── 5-SecondDocument.md  // concentrating solely on the order, not the numbers.
 ├── 3-SecondChapter                     // Focus only on the order, not the numbers.
-├────── 1-FirstDocumentOfSecondChapter.md 
+├────── 1-FirstDocumentOfSecondChapter.md
 ├────── 2-SecondDocumentOfSecondChapter.md  
-├── 7-ThirdChapter 
+├── 7-ThirdChapter
 ├── FourthChapter  // May have no order
-├── README.md // In addition to readme.md, not to put other markdown documents 
-└── book.json     // Set up the book 
+├── README.md // In addition to readme.md, not to put other markdown documents
+└── book.json     // Set up the book
 ```
 
 ## Install
@@ -47,13 +47,13 @@ npm install -g gitbook-summary
 
 ```
 $ cd /path/to/your/book/
-$ book sm g
-``` 
+$ book sm
+```
 
 or, For example:
 
 ```
-$ book sm g -r ../sailsjs-docs-gitbook/en -i 0home -u 'myApp' -c 'concepts, reference, userguides' -n "Sails.js 官方文档(中英合辑）"
+$ book sm -r ../sailsjs-docs-gitbook/en -i 0home -u 'myApp' -c 'concepts, reference, userguides' -n "Sails.js 官方文档(中英合辑）"
 ```
 
 2> Create a `book.json` in the book`s root folder
@@ -67,14 +67,14 @@ for example:
     "outputfile": "test.md",
     "catalog": "all",  // or [chapter1，chapter2, ...]
     "ignores": [],  
-    "unchanged": [] // for example: ['myApp'] -> `myApp` not `My App` 
+    "unchanged": [] // for example: ['myApp'] -> `myApp` not `My App`
 }
 ```
 
 then, you can do:
 
 ```
-$ book sm g
+$ book sm
 ```
 
 You will get a `test.md` file:
@@ -103,10 +103,8 @@ npm test
 
 ## Todo
 
+- Convert articals between Simplified and Traditional Chinese.
 - Generate eBooks(html, pdf, etc) by extending `gitbook`;
-- Publish to github pages, for example:  http://imfly.github.io/sails-docs
-- Merge to one page like a blog.
-- Auto aggregate ebooks to website.
 
 ## Contribute
 
@@ -115,4 +113,3 @@ We love pull requests! You can `fork it` and commit a `pr`
 ## License
 
 The MIT License
-

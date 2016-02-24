@@ -12,7 +12,7 @@ describe('Index.js', function() {
             fs.remove(file, done);
         });
 
-        it('should get a `SUMMARY.md` for `.` if has no options, for example: book sm g', function() {
+        it('should get a `SUMMARY.md` for `.` if has no options, for example: book sm', function() {
             book.summary({});
 
             // Fixme why can`t pass it using sync?
@@ -38,7 +38,7 @@ describe('Index.js', function() {
 
         describe('should get a `SUMMARY.md`', function() {
 
-            it('given an option root, for example: book sm g -r root', function() {
+            it('given an option root, for example: book sm -r root', function() {
                 book.summary({
                     root: bookRoot
                 });
@@ -49,7 +49,7 @@ describe('Index.js', function() {
                 });
             });
 
-            it('given an option bookname, for example: book sm g -n bookname', function() {
+            it('given an option bookname, for example: book sm -n bookname', function() {
                 var bookname = 'This is a test book';
                 book.summary({
                     root: bookRoot,
@@ -66,7 +66,7 @@ describe('Index.js', function() {
                 });
             });
 
-            it('given an option ignores, for example: book sm g -i test', function() {
+            it('given an option ignores, for example: book sm -i test', function() {
                 var bookname = 'This book has no test';
                 book.summary({
                     root: bookRoot,
