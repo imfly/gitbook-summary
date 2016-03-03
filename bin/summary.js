@@ -22,13 +22,13 @@ program
     .option("-o, --outputfile [outputfile]", "output file, defaut is `./SUMMARY.md`");
 
 program
-    .command("summary [cmd...]")
+    .command("summary [options...]")
     .alias("sm")
     .description("Generate a `SUMMARY.md` from a folder")
-    .action(function(cmd) {
+    .action(function(options) {
         // generate `SUMMARY.md`
-        if (cmd.length >= 1) {
-          console.log(color.red('\nError! The sub commands "%s" has been deprecated, please read the follow messages:'), cmd)
+        if (options.length >= 1) {
+          console.log(color.red('\nError! The sub commands "%s" has been deprecated, please read the follow messages:'), options);
           program.help();
         }else{
           book.summary(program.opts());
