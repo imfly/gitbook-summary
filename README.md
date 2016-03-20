@@ -81,6 +81,14 @@ You will get a `test.md` file:
 
 ![test.md.jpg](doc/img/test.md.jpg)
 
+3> Get a markdown artical from a html file or a remote url
+
+```
+$ book md -l "http://book.btcnodejs.com/index.html"
+```
+
+You will get the 'index.html' and 'index.md'.
+
 ## eBooks
 
 * https://github.com/imfly/how-to-create-self-publishing-platform
