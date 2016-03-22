@@ -84,10 +84,16 @@ You will get a `test.md` file:
 3> Get a markdown artical from a html file or a remote url
 
 ```
-$ book md -l "http://book.btcnodejs.com/index.html"
+$ book md -l "http://book.btcnodejs.com/index.html" -s "div.className"
 ```
 
 You will get the 'index.html' and 'index.md'.
+
+4> Get convert between zh and zh-tw, zh-hk, or zh-sg
+
+```
+$ book cv -f ./test/language/test.md -l zh-tw -t "./test/language/test2.md"
+```
 
 ## eBooks
 

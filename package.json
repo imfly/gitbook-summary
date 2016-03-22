@@ -1,6 +1,6 @@
 {
   "name": "gitbook-summary",
-  "version": "1.0.20",
+  "version": "1.0.30",
   "description": "A CLI to generate  a summary from a given folder.",
   "homepage": "http://imfly.github.io/gitbook-summary/",
   "main": "lib/index.js",
@@ -33,6 +33,7 @@
   "dependencies": {
     "async": "^1.5.0",
     "bash-color": "0.0.3",
+    "cheerio": "^0.20.0",
     "commander": "^2.9.0",
     "fs-extra": "^0.26.2",
     "iconv-lite": "^0.4.13",

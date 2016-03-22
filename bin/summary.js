@@ -36,14 +36,14 @@ program
     }
   });
 
-// todo
 program
   .command("html2md")
   .alias("md")
-  .description("Convert html to markdown.")
+  .description("Get markdown from a remote url or a local html.")
   .option("-f, --file [file]", "path to file")
   .option("-l, --url [url]", "artical`s url")
   .option("-t, --target [target]", "target to be saved")
+  .option("-s, --selector [selector]", "DOM element selector")
   .action(function(options) {
     html2md(options);
   });
@@ -53,9 +53,11 @@ program
   .command("convert")
   .alias("cv")
   .description("Todo: Convert articals between Simplified and Traditional Chinese.")
+  .option("-f, --file [file]", "path to file")
+  .option("-l, --language [language]", "artical`s language")
+  .option("-t, --target [target]", "target to be saved")
   .action(function(options) {
-    // Convert TW to CN
-    convert.run(options.opts());
+    convert(options);
   });
 
 // Parse and fallback to help if no args
