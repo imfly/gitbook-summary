@@ -2,10 +2,10 @@ var path = require('path');
 var fs = require('fs-extra');
 var should = require('should');
 
-var book = require('../');
+var summary = require('../lib/summary');
 var config = require('../lib/bookJson');
 
-describe('Index.js', function() {
+describe('summary/index.js', function() {
     describe('#summary()', function() {
         after(function(done) {
             var file = path.resolve('SUMMARY.md');
@@ -13,7 +13,7 @@ describe('Index.js', function() {
         });
 
         it('should get a `SUMMARY.md` for `.` if has no options, for example: book sm', function() {
-            book.summary({});
+            summary({});
 
             // Fixme why can`t pass it using sync?
             // should(fs.existsSync(path.join(bookRoot, 'SUMMARY.md'))).be.ok();
@@ -39,7 +39,7 @@ describe('Index.js', function() {
         describe('should get a `SUMMARY.md`', function() {
 
             it('given an option root, for example: book sm -r root', function() {
-                book.summary({
+                summary({
                     root: bookRoot
                 });
 
@@ -51,13 +51,13 @@ describe('Index.js', function() {
 
             it('given an option bookname, for example: book sm -n bookname', function() {
                 var bookname = 'This is a test book';
-                book.summary({
+                summary({
                     root: bookRoot,
                     bookname: bookname
                 });
 
-                var summary = path.resolve(bookRoot, 'SUMMARY.md');
-                fs.readFile(summary, 'utf8', function(err, content) {
+                var summaryFile = path.resolve(bookRoot, 'SUMMARY.md');
+                fs.readFile(summaryFile, 'utf8', function(err, content) {
                     if (err) {
                         console.log(err);
                     }
@@ -68,14 +68,14 @@ describe('Index.js', function() {
 
             it('given an option ignores, for example: book sm -i test', function() {
                 var bookname = 'This book has no test';
-                book.summary({
+                summary({
                     root: bookRoot,
                     bookname: bookname,
                     ignores: ['test']
                 });
 
-                var summary = path.resolve(bookRoot, 'SUMMARY.md');
-                fs.readFile(summary, 'utf8', function(err, content) {
+                var summaryFile = path.resolve(bookRoot, 'SUMMARY.md');
+                fs.readFile(summaryFile, 'utf8', function(err, content) {
                     if (err) {
                         console.log(err);
                     }
@@ -99,13 +99,13 @@ describe('Index.js', function() {
         });
 
         it('should get a `SUMMARY.md` if given a `book.json`', function() {
-            book.summary({
+            summary({
                 root: bookRoot
             });
 
-            var summary = path.resolve(bookRoot, config(bookRoot).outputfile);
+            var su = path.resolve(bookRoot, config(bookRoot).outputfile);
 
-            fs.exists(summary, function(err, exist) {
+            fs.exists(su, function(err, exist) {
                 if (err) {
                     console.log(err);
                 }
@@ -113,7 +113,7 @@ describe('Index.js', function() {
                 // fixme
                 // exist.should.be.ok();
 
-                fs.readFile(summary, 'utf8', function(err, content) {
+                fs.readFile(su, 'utf8', function(err, content) {
                     if (err) {
                         console.log(err);
                     }

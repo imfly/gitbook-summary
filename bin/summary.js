@@ -5,7 +5,7 @@ var program = require("commander");
 var color = require('bash-color');
 
 var pkg = require("../package.json");
-var book = require("../lib/");
+var summary = require("../lib/summary");
 var convert = require("../lib/convert");
 var html2md = require("../lib/html2md");
 
@@ -15,24 +15,24 @@ function list(val) {
 
 program
   .version(pkg.version)
+
+program
+  .command("summary")
+  .alias("sm")
+  .description("Generate a `SUMMARY.md` from a folder")
   .option("-r, --root [root]", "root folder, default is `.`")
   .option("-n, --bookname [bookname]", "book name, default is `Your Book Name`.")
   .option("-c, --catalog [catalog]", "catalog folders included book files, default is `all`.")
   .option("-i, --ignores [ignores]", "ignore folders that be excluded, default is `[]`.", list)
   .option("-u, --unchanged [unchanged]", "unchanged catalog like `request.js`, default is `[]`.")
-  .option("-o, --outputfile [outputfile]", "output file, defaut is `./SUMMARY.md`");
-
-program
-  .command("summary [options...]")
-  .alias("sm")
-  .description("Generate a `SUMMARY.md` from a folder")
+  .option("-o, --outputfile [outputfile]", "output file, defaut is `./SUMMARY.md`")
   .action(function(options) {
     // generate `SUMMARY.md`
     if (options.length >= 1) {
       console.log(color.red('\nError! The sub commands "%s" has been deprecated, please read the follow messages:'), options);
       program.help();
     } else {
-      book.summary(program.opts());
+      summary(options);
     }
   });
 
