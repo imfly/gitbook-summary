@@ -20,20 +20,22 @@ program
   .command("summary")
   .alias("sm")
   .description("Generate a `SUMMARY.md` from a folder")
-  .option("-r, --root [root]", "root folder, default is `.`")
-  .option("-n, --bookname [bookname]", "book name, default is `Your Book Name`.")
-  .option("-c, --catalog [catalog]", "catalog folders included book files, default is `all`.")
-  .option("-i, --ignores [ignores]", "ignore folders that be excluded, default is `[]`.", list)
-  .option("-u, --unchanged [unchanged]", "unchanged catalog like `request.js`, default is `[]`.")
-  .option("-o, --outputfile [outputfile]", "output file, defaut is `./SUMMARY.md`")
+  .option("-r, --root [string]", "root folder, default is `.`")
+  .option("-n, --bookname [string]", "book name, default is `Your Book Name`.")
+  .option("-c, --catalog [list]", "catalog folders included book files, default is `all`.")
+  .option("-i, --ignores [list]", "ignore folders that be excluded, default is `[]`.", list)
+  .option("-u, --unchanged [list]", "unchanged catalog like `request.js`, default is `[]`.")
+  .option("-o, --outputfile [string]", "output file, defaut is `./SUMMARY.md`")
+  .option("-s, --sortedBy [string]", "sorted by sortedBy, for example: `num-`, defaut is sorted by characters")
   .action(function(options) {
     // generate `SUMMARY.md`
-    if (options.length >= 1) {
-      console.log(color.red('\nError! The sub commands "%s" has been deprecated, please read the follow messages:'), options);
-      program.help();
-    } else {
+    // Fixme 
+    // if (options.length >= 1) {
+    //   console.log(color.red('\nError! The sub commands "%s" has been deprecated, please read the follow messages:'), cmd);
+    //   program.help();
+    // } else {
       summary(options);
-    }
+    // }
   });
 
 program

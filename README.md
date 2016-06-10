@@ -23,13 +23,13 @@ Source directory:
 
 ```
 sources
-├── 1-FirstChapter   // The first chapter，format: {orderNumber or alphabet}-{chapterName}.md
-├────── 1-FirstDocument.md
-├────── 5-SecondDocument.md  // concentrating solely on the order, not the numbers.
-├── 3-SecondChapter                     // Focus only on the order, not the numbers.
-├────── 1-FirstDocumentOfSecondChapter.md
-├────── 2-SecondDocumentOfSecondChapter.md  
-├── 7-ThirdChapter
+├── 1_FirstChapter   // The first chapter，format: {orderNumber or alphabet}-{chapterName}.md
+├────── 1_FirstDocument.md
+├────── 5_SecondDocument.md  // concentrating solely on the order, not the numbers.
+├── 3_SecondChapter                     // Focus only on the order, not the numbers.
+├────── 1_FirstDocumentOfSecondChapter.md
+├────── 2_SecondDocumentOfSecondChapter.md  
+├── 7_ThirdChapter
 ├── FourthChapter  // May have no order
 ├── README.md // In addition to readme.md, not to put other markdown documents
 └── book.json     // Set up the book
@@ -56,6 +56,8 @@ or, For example:
 $ book sm -r ../sailsjs-docs-gitbook/en -i 0home -u 'myApp' -c 'concepts, reference, userguides' -n "Sails.js 官方文档(中英合辑）"
 ```
 
+**Note**： `-s` or `--sortedBy` can not be given `-`, commander.js will parse it an option.
+
 2> Create a `book.json` in the book`s root folder
 
 for example:
@@ -67,7 +69,8 @@ for example:
     "outputfile": "test.md",
     "catalog": "all",  // or [chapter1，chapter2, ...]
     "ignores": [],  
-    "unchanged": [] // for example: ['myApp'] -> `myApp` not `My App`
+    "unchanged": [], // for example: ['myApp'] -> `myApp` not `My App`
+    "sortedBy": "_"
 }
 ```
 
@@ -97,8 +100,9 @@ $ book cv -f ./test/language/test.md -l zh-tw -t "./test/language/test2.md"
 
 ## eBooks
 
-* https://github.com/imfly/how-to-create-self-publishing-platform
-* https://github.com/imfly/sailsjs-docs-gitbook
+* 《Nodejs开发加密货币》： https://github.com/imfly/bitcoin-on-nodejs
+* 《用Gitbook和Github轻松搭建自出版平台》： https://github.com/imfly/how-to-create-self-publishing-platform
+* 《sails.js 官方文档 多语言电子书》：https://github.com/imfly/sailsjs-docs-gitbook
 
 More Gitbooks : https://www.gitbook.com/@imfly
 
