@@ -56,7 +56,7 @@ or, For example:
 $ book sm -r ../sailsjs-docs-gitbook/en -i 0home -u 'myApp' -c 'concepts, reference, userguides' -n "Sails.js 官方文档(中英合辑）"
 ```
 
-**Note**： `-s` or `--sortedBy` can not be given `-`, commander.js will parse it an option.
+**Note**： `-s` or `--sortedBy` can not be given `-`, commander.js will parse it an option. But you can set it in `book.json` as follow.
 
 2> Create a `book.json` in the book`s root folder
 
@@ -70,7 +70,7 @@ for example:
     "catalog": "all",  // or [chapter1，chapter2, ...]
     "ignores": [],  
     "unchanged": [], // for example: ['myApp'] -> `myApp` not `My App`
-    "sortedBy": "_"
+    "sortedBy": "-"
 }
 ```
 
