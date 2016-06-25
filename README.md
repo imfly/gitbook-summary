@@ -23,13 +23,13 @@ Source directory:
 
 ```
 sources
-├── 1_FirstChapter   // The first chapter，format: {orderNumber or alphabet}-{chapterName}.md
-├────── 1_FirstDocument.md
-├────── 5_SecondDocument.md  // concentrating solely on the order, not the numbers.
-├── 3_SecondChapter                     // Focus only on the order, not the numbers.
-├────── 1_FirstDocumentOfSecondChapter.md
-├────── 2_SecondDocumentOfSecondChapter.md  
-├── 7_ThirdChapter
+├── 1-FirstChapter   // The first chapter，format: {orderNumber or alphabet}-{chapterName}.md
+├────── 1-FirstDocument.md
+├────── 5-SecondDocument.md  // concentrating solely on the order, not the numbers.
+├── 3-SecondChapter                     // Focus only on the order, not the numbers.
+├────── 1-FirstDocumentOfSecondChapter.md
+├────── 2-SecondDocumentOfSecondChapter.md  
+├── 7-ThirdChapter
 ├── FourthChapter  // May have no order
 ├── README.md // In addition to readme.md, not to put other markdown documents
 └── book.json     // Set up the book
@@ -68,7 +68,7 @@ for example:
     "bookname": "json-config-name",
     "outputfile": "test.md",
     "catalog": "all",  // or [chapter1，chapter2, ...]
-    "ignores": [],  
+    "ignores": [],  //Default: '.*', '_book'...
     "unchanged": [], // for example: ['myApp'] -> `myApp` not `My App`
     "sortedBy": "-"
 }
