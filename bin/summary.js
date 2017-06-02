@@ -22,11 +22,11 @@ program
   .description("Generate a `SUMMARY.md` from a folder")
   .option("-r, --root [string]", "root folder, default is `.`")
   .option("-n, --bookname [string]", "book name, default is `Your Book Name`.")
-  .option("-c, --catalog [list]", "catalog folders included book files, default is `all`.")
-  .option("-i, --ignores [list]", "ignore folders that be excluded, default is `[]`.", list)
+  .option("-c, --catalog [list]", "folders to be included in book, default is `all`.")
+  .option("-i, --ignores [list]", "ignore patterns to be excluded, default is `[]`.", list)
   .option("-u, --unchanged [list]", "unchanged catalog like `request.js`, default is `[]`.")
-  .option("-o, --outputfile [string]", "output file, defaut is `./SUMMARY.md`")
-  .option("-s, --sortedBy [string]", "sorted by sortedBy, for example: `num-`, defaut is sorted by characters")
+  .option("-o, --outputfile [string]", "output file, default is `./SUMMARY.md`")
+  .option("-s, --sortedBy [string]", "sorted by sortedBy, for example: `num-`, default is sorted by characters")
   .action(function(options) {
     // generate `SUMMARY.md`
     // Fixme 
@@ -43,7 +43,7 @@ program
   .alias("md")
   .description("Get markdown from a remote url or a local html.")
   .option("-f, --file [file]", "path to file")
-  .option("-l, --url [url]", "artical`s url")
+  .option("-l, --url [url]", "articles`s url")
   .option("-t, --target [target]", "target to be saved")
   .option("-s, --selector [selector]", "DOM element selector")
   .action(function(options) {
@@ -54,9 +54,9 @@ program
 program
   .command("convert")
   .alias("cv")
-  .description("Todo: Convert articals between Simplified and Traditional Chinese.")
+  .description("Todo: Convert articles between Simplified and Traditional Chinese.")
   .option("-f, --file [file]", "path to file")
-  .option("-l, --language [language]", "artical`s language")
+  .option("-l, --language [language]", "articles`s language")
   .option("-t, --target [target]", "target to be saved")
   .action(function(options) {
     convert(options);
