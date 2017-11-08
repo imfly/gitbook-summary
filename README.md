@@ -70,7 +70,8 @@ for example:
     "catalog": "all",  // or [chapter1，chapter2, ...]
     "ignores": [],  //Default: '.*', '_book'...
     "unchanged": [], // for example: ['myApp'] -> `myApp` not `My App`
-    "sortedBy": "-"
+    "sortedBy": "-",
+    "disableTitleFormatting": true // default: false
 }
 ```
 
