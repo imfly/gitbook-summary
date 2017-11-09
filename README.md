@@ -56,7 +56,33 @@ or, For example:
 $ book sm -r ../sailsjs-docs-gitbook/en -i 0home -u 'myApp' -c 'concepts, reference, userguides' -n "Sails.js 官方文档(中英合辑）"
 ```
 
-**Note**： `-s` or `--sortedBy` can not be given `-`, commander.js will parse it an option. But you can set it in `book.json` as follow.
+To see the command line options:
+
+```
+$ book sm --help
+
+  Usage: summary|sm [options]
+
+  Generate a `SUMMARY.md` from a folder
+
+  Options:
+
+    -h, --help                    output usage information
+    -r, --root [string]           root folder, default is `.`
+    -n, --bookname [string]       book name, default is `Your Book Name`.
+    -c, --catalog [list]          catalog folders included book files, default is `all`.
+    -i, --ignores [list]          ignore folders that be excluded, default is `[]`.
+    -u, --unchanged [list]        unchanged catalog like `request.js`, default is `[]`.
+    -o, --outputfile [string]     output file, defaut is `./SUMMARY.md`
+    -s, --sortedBy [string]       sorted by sortedBy, for example: `num-`, defaut is sorted by characters
+    -d, --disableTitleFormatting  don't convert filename/folder name to start case (for example: `JavaScript` to `Java Script`), default is `false`
+
+```
+
+**Notes**： 
+* The article title is taken from `title` property in the articles front-matter. If this property is not available, the articles filename will be used as title for the summary. 
+* The option `-s` or `--sortedBy` can not be given `-` as argument, because commander.js will parse it an option. But you can set it in `book.json` as follows.
+
 
 2> Create a `book.json` in the book`s root folder
 
