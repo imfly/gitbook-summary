@@ -21,7 +21,7 @@ program
   .alias("sm")
   .description("Generate a `SUMMARY.md` from a folder")
   .option("-r, --root [string]", "root folder, default is `.`")
-  .option("-n, --bookname [string]", "book name, default is `Your Book Name`.")
+  .option("-t, --title [string]", "book title, default is `Your Book Title`.")
   .option("-c, --catalog [list]", "catalog folders included book files, default is `all`.")
   .option("-i, --ignores [list]", "ignore folders that be excluded, default is `[]`.", list)
   .option("-u, --unchanged [list]", "unchanged catalog like `request.js`, default is `[]`.")
