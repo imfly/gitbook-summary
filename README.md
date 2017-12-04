@@ -69,7 +69,7 @@ $ book sm --help
 
     -h, --help                    output usage information
     -r, --root [string]           root folder, default is `.`
-    -n, --bookname [string]       book name, default is `Your Book Name`.
+    -t, --title [string]          book title, default is `Your Book Title`.
     -c, --catalog [list]          catalog folders included book files, default is `all`.
     -i, --ignores [list]          ignore folders that be excluded, default is `[]`.
     -u, --unchanged [list]        unchanged catalog like `request.js`, default is `[]`.
@@ -91,7 +91,7 @@ for example:
 ```
 // test/books/config-json/book.json
 {
-    "bookname": "json-config-name",
+    "title": "json-config-name",
     "outputfile": "test.md",
     "catalog": "all",  // or [chapter1，chapter2, ...]
     "ignores": [],  //Default: '.*', '_book'...

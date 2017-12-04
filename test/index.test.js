@@ -49,11 +49,11 @@ describe('summary/index.js', function() {
                 });
             });
 
-            it('given an option bookname, for example: book sm -n bookname', function() {
-                var bookname = 'This is a test book';
+            it('given an option title, for example: book sm -t title', function() {
+                var title = 'This is a test book';
                 summary({
                     root: bookRoot,
-                    bookname: bookname
+                    title: title
                 });
 
                 var summaryFile = path.resolve(bookRoot, 'SUMMARY.md');
@@ -67,10 +67,10 @@ describe('summary/index.js', function() {
             });
 
             it('given an option ignores, for example: book sm -i test', function() {
-                var bookname = 'This book has no test';
+                var title = 'This book has no test';
                 summary({
                     root: bookRoot,
-                    bookname: bookname,
+                    title: title,
                     ignores: ['test']
                 });
 
