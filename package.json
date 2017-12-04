@@ -1,6 +1,6 @@
 {
   "name": "gitbook-summary",
-  "version": "1.1.4",
+  "version": "1.2.0",
   "description": "A CLI to generate  a summary from a given folder.",
   "homepage": "http://imfly.github.io/gitbook-summary/",
   "bin": {
