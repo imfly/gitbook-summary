@@ -2,7 +2,8 @@ var path = require('path');
 var fs = require('fs-extra');
 var should = require('should');
 
-var summary = require('../lib/summary');
+var summary = require('../lib/summary').summary;
+var isNonAscii = require('../lib/summary').isNonAscii;
 var config = require('../lib/bookJson');
 
 describe('summary/index.js', function() {
@@ -123,5 +124,10 @@ describe('summary/index.js', function() {
                 });
             });
         });
+    });
+
+    it('test non-ascii', function() {
+      should(isNonAscii('111Ab')).be.false();
+      should(isNonAscii('111Abㅁ')).be.true();
     });
 });
