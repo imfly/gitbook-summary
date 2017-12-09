@@ -81,8 +81,12 @@ $ book sm --help
 
 **Notes**： 
 * The article title is taken from `title` property in the articles front-matter. If this property is not available, the articles filename will be used as title for the summary. 
-* The option `-s` or `--sortedBy` can not be given `-` as argument, because commander.js will parse it an option. But you can set it in `book.json` as follows.
-
+* The option `-s` or `--sortedBy` can not be given `-` as argument, because commander.js will parse it an option. But you can set it in `book.json` as follows.  
+* set up the sortedBy and if there are any summaries missing the order, look at the example below and follow,  
+for example, you have summaries like this `01-elementry-school, 02-middle-school, 03-university, ...`  
+you realized high school was missing, then You can make correct order in the following way  
+eg. `01-elementry-school, 02-middle-school, 02a-high-school, 03-university, ...`  
+not `01-elementry-school, 02-middle-school, 03-high-school, 04-university, ...`
 
 2> Create a `book.json` in the book`s root folder
 
