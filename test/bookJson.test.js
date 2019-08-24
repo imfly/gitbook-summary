@@ -5,7 +5,7 @@ var should = require('should');
 var config = require('../lib/bookJson');
 
 describe('config.js', function () {
-	it('should get book.bookname if `book.json` exists', function () {
-		should(config('test/books/config-json').bookname).be.equal('json-config-name');
+	it('should get book.title if `book.json` exists', function () {
+		should(config('test/books/config-json').title).be.equal('json-config-name');
 	});
 });

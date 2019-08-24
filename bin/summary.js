@@ -5,7 +5,7 @@ var program = require("commander");
 var color = require('bash-color');
 
 var pkg = require("../package.json");
-var summary = require("../lib/summary");
+var summary = require("../lib/summary").summary;
 var convert = require("../lib/convert");
 var html2md = require("../lib/html2md");
 
@@ -21,15 +21,17 @@ program
   .alias("sm")
   .description("Generate a `SUMMARY.md` from a folder")
   .option("-r, --root [string]", "root folder, default is `.`")
-  .option("-n, --bookname [string]", "book name, default is `Your Book Name`.")
+  .option("-t, --title [string]", "book title, default is `Your Book Title`.")
   .option("-c, --catalog [list]", "folders to be included in book, default is `all`.")
   .option("-i, --ignores [list]", "ignore patterns to be excluded, default is `[]`.", list)
   .option("-u, --unchanged [list]", "unchanged catalog like `request.js`, default is `[]`.")
   .option("-o, --outputfile [string]", "output file, default is `./SUMMARY.md`")
   .option("-s, --sortedBy [string]", "sorted by sortedBy, for example: `num-`, default is sorted by characters")
+  .option("-d, --disableTitleFormatting", "don't convert filename/folder name to start case (for example: `JavaScript` to `Java Script`), default is `false`")
+
   .action(function(options) {
     // generate `SUMMARY.md`
-    // Fixme 
+    // Fixme
     // if (options.length >= 1) {
     //   console.log(color.red('\nError! The sub commands "%s" has been deprecated, please read the follow messages:'), cmd);
     //   program.help();

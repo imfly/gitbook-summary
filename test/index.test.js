@@ -2,7 +2,8 @@ var path = require('path');
 var fs = require('fs-extra');
 var should = require('should');
 
-var summary = require('../lib/summary');
+var summary = require('../lib/summary').summary;
+var isNonAscii = require('../lib/summary').isNonAscii;
 var config = require('../lib/bookJson');
 
 describe('summary/index.js', function() {
@@ -49,11 +50,11 @@ describe('summary/index.js', function() {
                 });
             });
 
-            it('given an option bookname, for example: book sm -n bookname', function() {
-                var bookname = 'This is a test book';
+            it('given an option title, for example: book sm -t title', function() {
+                var title = 'This is a test book';
                 summary({
                     root: bookRoot,
-                    bookname: bookname
+                    title: title
                 });
 
                 var summaryFile = path.resolve(bookRoot, 'SUMMARY.md');
@@ -67,10 +68,10 @@ describe('summary/index.js', function() {
             });
 
             it('given an option ignores, for example: book sm -i test', function() {
-                var bookname = 'This book has no test';
+                var title = 'This book has no test';
                 summary({
                     root: bookRoot,
-                    bookname: bookname,
+                    title: title,
                     ignores: ['test']
                 });
 
@@ -123,5 +124,10 @@ describe('summary/index.js', function() {
                 });
             });
         });
+    });
+
+    it('test non-ascii', function() {
+      should(isNonAscii('111Ab')).be.false();
+      should(isNonAscii('111Abㅁ')).be.true();
     });
 });
