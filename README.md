@@ -8,6 +8,14 @@
 
 A command line tool to generate a `SUMMARY.MD` from a folder。[Demo](http://imfly.github.io/how-to-create-self-publishing-platform) [中文文档](http://imfly.github.io/how-to-create-self-publishing-platform/3-%E5%A6%82%E4%BD%95%E6%89%93%E9%80%A0%E8%87%AA%E5%B7%B1%E7%9A%84%E5%B9%B3%E5%8F%B0%EF%BC%9F/2-Summary%E7%9A%84%E4%BD%BF%E7%94%A8.html)
 
+## EBooks
+
+* 《Nodejs开发加密货币》： https://github.com/imfly/bitcoin-on-nodejs
+* 《用Gitbook和Github轻松搭建自出版平台》： https://github.com/imfly/how-to-create-self-publishing-platform
+* 《sails.js 官方文档 多语言电子书》：https://github.com/imfly/sailsjs-docs-gitbook
+
+More Gitbooks : https://www.gitbook.com/@imfly
+
 ## Features
 
 - Generate `SUMMARY.md` by using a CLI with some options
@@ -128,14 +136,6 @@ You will get the 'index.html' and 'index.md'.
 ```
 $ book cv -f ./test/language/test.md -l zh-tw -t "./test/language/test2.md"
 ```
-
-## eBooks
-
-* 《Nodejs开发加密货币》： https://github.com/imfly/bitcoin-on-nodejs
-* 《用Gitbook和Github轻松搭建自出版平台》： https://github.com/imfly/how-to-create-self-publishing-platform
-* 《sails.js 官方文档 多语言电子书》：https://github.com/imfly/sailsjs-docs-gitbook
-
-More Gitbooks : https://www.gitbook.com/@imfly
 
 ## Development
 
