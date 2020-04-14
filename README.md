@@ -10,7 +10,7 @@ A command line tool to generate a `SUMMARY.MD` from a folder。[Demo](http://imf
 
 ## EBooks
 
-* 《Nodejs开发加密货币》： https://github.com/imfly/bitcoin-on-nodejs
+* 《Nodejs区块链开发》： https://github.com/imfly/bitcoin-on-nodejs
 * 《用Gitbook和Github轻松搭建自出版平台》： https://github.com/imfly/how-to-create-self-publishing-platform
 * 《sails.js 官方文档 多语言电子书》：https://github.com/imfly/sailsjs-docs-gitbook
 
