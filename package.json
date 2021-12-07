@@ -1,6 +1,6 @@
 {
   "name": "gitbook-summary",
-  "version": "1.2.3",
+  "version": "1.2.4",
   "description": "A CLI to generate  a summary from a given folder.",
   "homepage": "http://imfly.github.io/gitbook-summary/",
   "bin": {
@@ -27,7 +27,7 @@
     "url": "https://github.com/imfly/sailsjs-docs-gitbook/issues"
   },
   "engines": {
-    "node": ">=4"
+    "node": ">=4.0"
   },
   "dependencies": {
     "async": "^1.5.0",
@@ -40,7 +40,7 @@
     "lodash": "^3.10.1",
     "path": "^0.12.7",
     "request": "^2.69.0",
-    "to-markdown": "^2.0.1"
+    "to-markdown": "^3.1.1"
   },
   "devDependencies": {
     "coveralls": "^2.11.4",
